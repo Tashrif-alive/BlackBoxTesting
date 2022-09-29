@@ -1,0 +1,103 @@
+package LeapYearChk;
+
+
+// Testing LEAP YEAR within 1500 to 4000 both BVC AND ROBUST
+
+
+public class LeapYearTest {
+    
+ //Testing ( minimum - 1 ) = 1499 value
+
+@Test
+
+ public void TestMinimumMinusCase()
+ {
+     LeapYearCheck basecase = new LeapYearCheck();
+   
+     boolean result = basecase.check(1499);
+    
+     assertEquals(false, result );
+ }
+
+ //Testing ( minimum ) = 1500 value
+
+ @Test
+ public void TestMinimumCase()
+ {
+     LeapYearCheck basecase = new LeapYearCheck();
+
+     boolean result = basecase.check(1500);
+
+     assertEquals( false, result);
+ }
+
+ //Testing ( minimum + 1 ) = 1501 value
+
+ @Test
+
+ public void TestMinimumPlusCase()
+ {
+     LeapYearCheck basecase = new LeapYearCheck();
+   
+     boolean result = basecase.check(1501);
+   
+     assertEquals(false, result );
+ }
+
+ //Testing ( nominal ) = 2750 value
+
+ @Test
+
+ public void TestNominalCase()
+ {
+     LeapYearCheck basecase = new LeapYearCheck();
+   
+     boolean result = basecase.check(2750);
+   
+     assertEquals( false, result);
+ }
+
+ //Testing ( maximum - 1 ) = 3999 value
+
+ @Test
+
+ public void TestMaximumMinusCase()
+ {
+     LeapYearCheck basecase = new LeapYearCheck();
+     
+     boolean result = basecase.check(3999);
+  
+     assertEquals(false, result);
+ }
+
+ //Testing ( maximum ) = 4000 value
+
+ @Test
+
+ public void TestMaximumCase()
+ {
+  
+     LeapYearCheck basecase = new LeapYearCheck();
+   
+     boolean result = basecase.check(4000);
+   
+     assertEquals( true, result);
+ }
+
+ //Testing ( maximum + 1 ) = 4001 value
+
+ @Test
+
+ public void TestMaximumPlusCase()
+ {
+ 
+     LeapYearCheck basecase = new LeapYearCheck();
+
+     boolean result = basecase.check(4001);
+
+     assertEquals( false, result);
+ }
+
+private void assertEquals(boolean b, boolean result) {
+}
+}
